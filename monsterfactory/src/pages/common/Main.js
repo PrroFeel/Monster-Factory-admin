@@ -1,3 +1,5 @@
+import mainCss from '../../commonCss/main.css'
+
 function Main() {
 
     return (
