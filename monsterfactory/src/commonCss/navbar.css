@@ -1,0 +1,50 @@
+.navbar {
+    background-color: #656E8C;
+    height: 50px;
+}
+
+.navbarBtnS {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+
+.navbarBtn {
+    background-color: #A6C6CA;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+    margin: 5%;
+    margin-top: 3px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.loginBtnBox {
+    background-color: #E9E9C5;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: none;
+    margin: 5%;
+    margin-top: 3px;
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.loginBtn {
+    text-decoration: none;
+}
+
+button {
+    background-color: #E9E9C5;
+    text-decoration: none;
+    border-style: none;
+}
