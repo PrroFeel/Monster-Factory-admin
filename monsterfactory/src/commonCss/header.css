@@ -5,3 +5,15 @@
     margin: 0px;
     text-align: center;
 }
+
+.loginheader {
+    background-color: #2C4A6C;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin: 0px;
+    text-align: left;
+}
+
+.loginheaderimg {
+    margin-left: 30px;
+}
