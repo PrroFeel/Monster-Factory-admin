@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
+import login from './login.css';
 
 import {
     callLoginAPI
@@ -19,6 +20,10 @@ function Login() {
         memberId: '',
         memberPassword: '',
     });
+
+    const onClickLogoHandler = () => {
+        navigate("/", { replace: true })
+    }
 
     useEffect(() => {
 
@@ -47,25 +52,30 @@ function Login() {
 
     return (
         <>
-            <div>
-                <h1>로그인</h1>
+            <div className='centerbox'>
+                <img src="monfac-logo.png" onClick={ onClickLogoHandler } width='100%' height='100%'/>
+                <h3>관리자 모드</h3>
                 <input
                     type="text"
                     name="memberId"
-                    placeholder="아이디"
+                    placeholder="아이디 입력"
                     autoComplete='off'
                     onChange={ onChangeHandler }
+                    className='logininput'
                 />
                 <input
                     type="password"
                     name='memberPassword'
-                    placeholder='패스워드'
+                    placeholder='패스워드 입력'
                     autoComplete='off'
                     onChange={ onChangeHandler }
+                    className='logininput'
                 />
-                <button onClick={ onClickLoginHandler }>
-                    로그인
-                </button>
+                <div>
+                    <button onClick={ onClickLoginHandler } className='loginsucbtn'>
+                        로그인
+                    </button>
+                </div>
             </div>
         </>
     );
