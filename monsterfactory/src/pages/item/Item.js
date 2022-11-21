@@ -17,15 +17,15 @@ function Item() {
     const dispatch = useDispatch();
     const itemList = useSelector(state => state.itemReducer);
 
-    console.log('itemList', itemList);
-
-    // const token = decodeJwt(window.localStorage.getItem("accessToken"));
-
     useEffect(
         () => {
             dispatch(callItemAPI());
         }, []
     );
+
+    const onClickHandler = (itemId) => {
+        navigate(`${itemId}`, { replace: false });
+    }
 
     return (
         <>
@@ -36,14 +36,14 @@ function Item() {
                 <br/>
                 {
                     itemList && itemList.map((item) => (
-                        <div className='itembox'>
-                                <div className='iteminfosmall'>
-                                    <img src={item.itemImgData.itemImgUrl} className='itemImg'/>
-                                    <div className='iteminfotext'>
-                                        <h3>이름 : {item.itemName}</h3>
-                                        <h3>가격 : {item.itemPrice}mon</h3>
-                                    </div>
+                        <div className='itembox' onClick={ () => onClickHandler(item.itemId) }>
+                            <div className='iteminfosmall'>
+                                <img src={item.itemImgData.itemImgUrl} className='itemImg'/>
+                                <div className='iteminfotext'>
+                                    <h3>이름 : {item.itemName}</h3>
+                                    <h3>가격 : {item.itemPrice}mon</h3>
                                 </div>
+                            </div>
                         </div>
                     ))
                 }

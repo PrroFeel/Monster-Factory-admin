@@ -1,6 +1,6 @@
 import {
     GET_ITEMS,
-    // GET_ITEM,
+    GET_ITEM,
     // POST_ITEM,
     // PUT_ITEM,
     // DELETE_ITEM
@@ -22,38 +22,37 @@ export const callItemAPI = () => {
             }
         })
         .then(response => response.json());
-            console.log('result', result);
             dispatch({ type: GET_ITEMS, payload: result });
         
     };
 }
 
 
-// // 아이템 하나 상세 조회
-// export const callItemBySearchAPI = ({search}) => {
+// 아이템 하나 상세 조회
+export const callItemBySearchAPI = ({itemId}) => {
 
-//     const requestURL = `http://${REACT_APP_RESTAPI_IP}/items/${search}`;
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}/items/${itemId}`;
 
-//     return async (dispatch, getState) => {
+    return async (dispatch, getState) => {
 
-//         const result = await fetch(requestURL, {
-//             method: "GET",
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 "Accept": "*/*"
-//             }
-//         })
-//         .then(response => response.json());
+        const result = await fetch(requestURL, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*"
+            }
+        })
+        .then(response => response.json());
 
-//         dispatch({ type: GET_ITEM, payload: result });
-//     };
-// };
+        dispatch({ type: GET_ITEM, payload: result });
+    };
+};
 
 
 // // 아이템 등록
 // export const callItemRegistAPI = ({form}) => {
 
-//     const requestURL = `http://${REACT_APP_RESTAPI_IP}/item/regist`;
+//     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}/item/regist`;
 
 //     return async (dispatch, getState) => {
 
@@ -75,7 +74,7 @@ export const callItemAPI = () => {
 // // 아이템 수정
 // export const callItemUpdateAPI = ({form}, itemId) => {
 
-//     const requestURL = `http://${REACT_APP_RESTAPI_IP}/item/update/${itemId}`;
+//     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}/item/update/${itemId}`;
 
 //     return async (dispatch, getState) => {
 
@@ -96,7 +95,7 @@ export const callItemAPI = () => {
 // // 아이템 삭제
 // export const callItemDeleteAPI = (itemId) => {
 
-//     const requestURL = `http://${REACT_APP_RESTAPI_IP}/item/delete/${itemId}`;
+//     const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}/item/delete/${itemId}`;
 
 //     return async (dispatch, getState) => {
 

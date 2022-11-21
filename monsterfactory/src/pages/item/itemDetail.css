@@ -1,0 +1,33 @@
+.itemdetailbox {
+    background-color: #DBCECE;
+    margin: 10%;
+    border-radius: 30px;
+    display: flex;
+}
+
+.itemdetailsmallbox {
+    background-color: white;
+    border-radius: 30px;
+    margin: 50px;
+    width: 100%;
+}
+
+.itemdetailtextbox {
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.itemdetailinfotextbox {
+    background-color: #DBCECE;
+    text-align: left;
+    padding-left: 5%;
+    margin: 3%;
+    border-radius: 30px;;
+    width: 100%;
+    vertical-align: center;
+    justify-content: center;
+    align-items: center;
+}
