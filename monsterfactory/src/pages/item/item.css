@@ -1,0 +1,56 @@
+.itembigbox {
+    background-color: #DBCECE;
+    margin: 10%;
+    margin-top: 5%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-radius: 30px;
+}
+
+.itembox {
+    background-color: white;
+    height: 300px;
+    width: 400px;
+    display: inline-flex;
+    margin: 30px;
+    text-align: center;
+    position: static;
+    
+    align-items: center;
+}
+
+.itemImg {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.iteminfosmall {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.iteminfotext {
+    padding-left: 10px;
+}
+
+.itemregistbtn {
+    height: 50px;
+    width: 300px;
+    border-radius: 30px;
+    background-color: #A19BC2;
+    font-size: 15px;
+}
+
+.itemregistbtnposition {
+    text-align: right;
+    margin-right: 7%;
+}
+
+.itemregistbtn:hover {
+    background-color: #656E8C;
+}
