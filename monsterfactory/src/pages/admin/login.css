@@ -15,7 +15,7 @@
 
 .logininput {
     width: 70%;
-    height: 30px;
+    height: 40px;
     background-color: #E9E9C5;
     border-style: none;
     margin: 5px;
@@ -26,6 +26,11 @@
     background-color: #656E8C;
     margin-top: 60px;
     width: 70%;
-    height: 40px;
+    height: 60px;
     border-radius: 20px;
+    font-size: 20px;
+}
+
+.loginsucbtn:hover {
+    background-color: #A19BC2;
 }

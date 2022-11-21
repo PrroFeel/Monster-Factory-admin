@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
-import header from '../../commonCss/header.css'
+import header from '../../commonCss/header.css';
 
 function Header() {
 
     const navigate = useNavigate();
 
     const onClickLogoHandler = () => {
-        navigate("/", { replace: true })
+        navigate("/main", { replace: true })
     }
 
     return (

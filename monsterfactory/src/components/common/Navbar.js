@@ -16,40 +16,26 @@ function Navbar() {
     const dispatch = useDispatch();
     const loginMember = useSelector(state => state.memberReducer);
     const isLogin = window.localStorage.getItem('accessToken');
-    const [search, setSearch] = useState('');
-
-    const onSearchHandler = (e) => {
-        setSearch(e.target.value);
-    }
 
     const onClickTokenEndHandler = () => {
 
         const token = decodeJwt(window.localStorage.getItem("accessToken"));
 
         if(token.exp * 1000 < Date.now()) {
-            navigate("/login", { replace: true });
+            navigate("/", { replace: true });
             return ;
         }
 
-        navigate("/", { replace: true });
+        navigate("/main", { replace: true });
     }
 
     const onClickLogoutHandler = () => {
         window.localStorage.removeItem('accessToken');
         dispatch(callLogoutAPI());
 
-        alert('로그아웃이 되어 메인 화면으로 이동합니다');
+        alert('로그아웃이 되어 로그인 페이지로 이동합니다');
         navigate("/", { replace: true })
         window.location.reload();
-    }
-
-    function BeforeLogin() {
-
-        return (
-            <div className='loginBtnBox'>
-                <NavLink to = "/login" className='loginBtn'>로그인</NavLink>
-            </div>
-        );
     }
 
     function AfterLogin() {
@@ -65,10 +51,10 @@ function Navbar() {
         <>
             <div className='navbar'>
                 <div className='navbarBtnS'>
-                    <button className='navbarBtn'> 운영 </button>
-                    <button className='navbarBtn'> 심사 </button>
-                    <button className='navbarBtn'> 아이템 </button>
-                    { (isLogin == null || isLogin === undefined) ? <BeforeLogin/> : <AfterLogin/> }
+                    <NavLink to={"manage"} className='navbarBtn'> 운영 </NavLink>
+                    <NavLink to={"review"} className='navbarBtn'> 심사 </NavLink>
+                    <NavLink to={"item"} className='navbarBtn'> 아이템 </NavLink>
+                    <AfterLogin/>
                 </div>
             </div>
         </>

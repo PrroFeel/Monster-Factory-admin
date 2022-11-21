@@ -2,9 +2,11 @@ import {
     POST_LOGIN
 } from '../modules/MemberModule';
 
+
+// 로그인
 export const callLoginAPI = ({form}) => {
 
-    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}:8080/auth/login`;
+    const requestURL = `http://${process.env.REACT_APP_RESTAPI_IP}/auth/login`;
 
     return async (dispatch, getState) => {
 
@@ -32,6 +34,8 @@ export const callLoginAPI = ({form}) => {
 
 }
 
+
+// 로그아웃
 export const callLogoutAPI = () => {
     
 
