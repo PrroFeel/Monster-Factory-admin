@@ -10,7 +10,6 @@
     vertical-align: center;
 }
 
-
 .navbarBtn {
     background-color: #A6C6CA;
     text-align: center;
@@ -23,6 +22,11 @@
     padding-right: 90px;
     padding-top: 12px;
     padding-bottom: 12px;
+    color: black;
+}
+
+.navbarBtn:active, .navbarBtn:hover {
+    color: #656E8C;
 }
 
 .loginBtnBox {
@@ -41,6 +45,7 @@
 
 .loginBtn {
     text-decoration: none;
+    font-size: 15px;
 }
 
 button {

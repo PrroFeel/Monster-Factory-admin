@@ -21,20 +21,16 @@ function Login() {
         memberPassword: '',
     });
 
-    const onClickLogoHandler = () => {
-        navigate("/", { replace: true })
-    }
-
     useEffect(() => {
 
         if(loginMember.status === 200) {
             console.log("login success", loginMember);
-            navigate("/", { replace: true });
+            navigate("/main", { replace: true });
         }
     }, [loginMember]);
 
     if(loginMember.length > 0) {
-        return <Navigate to="/"/>
+        return <Navigate to="/main"/>
     }
 
     const onChangeHandler = (e) => {
@@ -45,15 +41,22 @@ function Login() {
     };
 
     const onClickLoginHandler = () => {
-        dispatch(callLoginAPI({
-            form: form
-        }));
+
+        if(form.memberId != 'admin') {
+            alert("관리자 아이디가 아닙니다");
+        }
+        else {
+            dispatch(callLoginAPI({
+                form: form
+            }));
+        }
+        
     }
 
     return (
         <>
             <div className='centerbox'>
-                <img src="monfac-logo.png" onClick={ onClickLogoHandler } width='100%' height='100%'/>
+                <img src="monfac-logo.png" width='100%' height='100%'/>
                 <h3>관리자 모드</h3>
                 <input
                     type="text"
