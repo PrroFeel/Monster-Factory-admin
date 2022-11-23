@@ -6,8 +6,8 @@ import Main from "./pages/common/Main";
 import Item from "./pages/item/Item";
 import ItemDetail from "./pages/item/ItemDetail";
 import Manage from "./pages/manage/Manage";
-import Review from "./pages/review/Review";
-
+import ReviewWaitedPage from "./pages/review/ReviewWaitedPage";
+import ReviewPage from "./pages/review/ReviewPage";
 function App() {
   return (
 
@@ -21,7 +21,8 @@ function App() {
           <Route index element ={ <Main/> }/>
           <Route path="item" element={ <Item/> }/>
           <Route path="item/:itemId" element={ <ItemDetail/> }/>
-          <Route path="review" element={ <Review/> }/>
+          <Route path="review" element={ <ReviewWaitedPage/> }/>
+          <Route path="review/:gameId" element={ <ReviewPage/> }/>
           <Route path="manage" element={ <Manage/> }/>
         </Route>
       </Routes>

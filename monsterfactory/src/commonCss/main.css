@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'NanumSquareNeo-aLt';
+    src: url('../font/NanumSquareNeo-aLt.ttf') format('truetype');
+}
+
 body {
     background-color : #989CC9;
     margin: 0px;
+    font-family: 'NanumSquareNeo-aLt';
 }

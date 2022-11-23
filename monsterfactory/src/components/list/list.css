@@ -1,0 +1,43 @@
+
+.listbox {
+    background-color: white;
+    height: 400px;
+    width: 320px;
+    display: inline-flex;
+    margin: 30px;
+    text-align: center;
+    position: static;
+}
+
+.listbox:hover {
+    background-color: #656E8C;
+}
+
+
+.summaryinfosmall {
+    text-align: left;
+    align-items: center;
+}
+
+.summaryImg {
+    width: 320px;
+    height: 250px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.detailbox {
+    background-color: #DBCECE;
+    margin: 10%;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.detailsmallbox {
+    background-color: white;
+    border-radius: 30px;
+    margin: 50px;
+}

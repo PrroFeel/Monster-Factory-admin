@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('../font/NanumSquareNeo-aLt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-bRg';
+    src: url('../font/NanumSquareNeo-bRg.ttf') format('truetype');
+}
+
+
