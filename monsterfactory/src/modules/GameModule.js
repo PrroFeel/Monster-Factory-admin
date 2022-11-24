@@ -1,10 +1,11 @@
 import { createActions, handleActions } from "redux-actions";
 
-const initialState = [];
+const initialState =[]
 
 export const GET_GAMES = 'game/GET_GAMES';
 export const GET_GAME = 'game/GET_GAME';
 export const GAME_INIT = 'game/GAME_INIT';
+
 const actions = createActions({
     [GET_GAMES]: () => {},
     [GET_GAME]: () => {},
@@ -21,7 +22,8 @@ const gameReducer = handleActions(
         },
         [GET_GAME]: (state, { payload }) => {
             return payload;
-        }
+        },
+
     },
     initialState
 );

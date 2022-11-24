@@ -32,7 +32,6 @@ function GameDetail() {
                             <h3>게임 상태 : {game.gameStatus}</h3>
                             <h3>제출 날짜 및 시간 : {game.submitDatetime}</h3>
                             <h3>게임 설명 : {game.gameDescription}</h3>
-                            <h3>웨않되</h3>
                         </div>
                     </div>
                 </div>
