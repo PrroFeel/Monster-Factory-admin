@@ -57,7 +57,7 @@ function Login() {
         <>
             <div className='centerbox'>
                 <img src="monfac-logo.png" width='100%' height='100%'/>
-                <h3>관리자 모드</h3>
+                <h3 style={{color: 'white'}}>관리자 모드</h3>
                 <input
                     type="text"
                     name="memberId"

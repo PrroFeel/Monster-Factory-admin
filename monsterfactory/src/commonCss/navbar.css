@@ -4,7 +4,7 @@
 }
 
 .navbar {
-    background-color: #656E8C;
+    background-color: #1E2434;
     height: 50px;
 }
 
@@ -16,7 +16,6 @@
 }
 
 .navbarBtn {
-    background-color: #A6C6CA;
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
@@ -27,17 +26,18 @@
     padding-right: 90px;
     padding-top: 12px;
     padding-bottom: 12px;
-    color: black;
+    color: white;
     font-weight: bold;
     font-family: 'NanumSquareNeo-bRg';
 }
 
 .navbarBtn:active, .navbarBtn:hover {
-    color: #656E8C;
+    color: white;
+    background-color: #6A5883;
 }
 
 .loginBtnBox {
-    background-color: #E9E9C5;
+    background-color: #656E8C;
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
@@ -57,11 +57,11 @@
 }
 
 .loginBtn:active, .loginBtn:hover {
-    color: #656E8C;
+    color: white;
 }
 
 button {
-    background-color: #E9E9C5;
+    background-color: #656E8C;
     text-decoration: none;
     border-style: none;
     font-family: 'NanumSquareNeo-bRg';

@@ -1,5 +1,5 @@
 .centerbox {
-    background-color: #DBCECE;
+    background-color: #2B3147;
     text-align: center;
     text-decoration: none;
     border-radius: 40px;
@@ -16,21 +16,25 @@
 .logininput {
     width: 70%;
     height: 40px;
-    background-color: #E9E9C5;
+    background-color: #1E2434;
     border-style: none;
     margin: 5px;
     border-radius: 20px;
+    color: white;
+    padding-left: 20px;
 }
 
 .loginsucbtn {
-    background-color: #656E8C;
+    background-color: #6A5883;
     margin-top: 60px;
     width: 70%;
     height: 60px;
     border-radius: 20px;
     font-size: 20px;
+    color: white;
 }
 
 .loginsucbtn:hover {
     background-color: #A19BC2;
+    color: black;
 }
