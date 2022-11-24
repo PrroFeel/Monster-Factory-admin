@@ -8,8 +8,8 @@ import ItemDetail from "./pages/item/ItemDetail";
 import ItemRegist from "./pages/item/ItemRegist";
 import ItemUpdatePage from "./pages/item/ItemUpdatePage";
 import Manage from "./pages/manage/Manage";
-import Review from "./pages/review/Review";
-
+import ReviewWaitedPage from "./pages/review/ReviewWaitedPage";
+import ReviewPage from "./pages/review/ReviewPage";
 function App() {
   return (
 
@@ -24,7 +24,8 @@ function App() {
           <Route path="item/:itemId" element={ <ItemDetail/> }/>
           <Route path="item/regist" element={ <ItemRegist/> }/>
           <Route path="item/:itemId/update" element={ <ItemUpdatePage/> }/>
-          <Route path="review" element={ <Review/> }/>
+          <Route path="review" element={ <ReviewWaitedPage/> }/>
+          <Route path="review/:gameId" element={ <ReviewPage/> }/>
           <Route path="manage" element={ <Manage/> }/>
         </Route>
       </Routes>
