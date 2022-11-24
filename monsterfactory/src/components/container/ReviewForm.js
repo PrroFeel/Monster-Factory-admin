@@ -1,3 +1,6 @@
+import './form.css';
+
+
 import reviewReducer, { SET_REVIEW } from "../../modules/ReviewModule";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -7,6 +10,8 @@ import RegistButton from "../item/RegistButton";
 import { callRegistReviewApi } from "../../apis/ReviewAPICalls";
 
 import { useSelector } from "react-redux";
+
+
 function ReviewForm(){
 
     const params = useParams();
@@ -37,13 +42,17 @@ function ReviewForm(){
     }
     return (
         <>
-            <textarea name="comment" onChange={onChangeHandler}></textarea>
+            <div className="textbox">
+                <h3>심사평</h3>
+                <textarea cols="10" rows="100" className='textareastyle' name="comment" onChange={onChangeHandler}></textarea>
+            </div>
             <div style={{display:"flex", justifyContent:"center"}}>
                 <RegistButton onClickHandler={onClickRegistHandler} value="APPROVED" buttonText="승인"/>
                 <RegistButton onClickHandler={onClickRegistHandler} value="RETURNED" buttonText="반려"/>
             </div>
-
         </>
+
+       
     );
 }
 export default ReviewForm;
