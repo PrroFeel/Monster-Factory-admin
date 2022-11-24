@@ -21,7 +21,7 @@ function ReviewWaitedList() {
     );
 
     const onClickHandler = (gameId) => {
-
+        
         navigate(`${gameId}`, { replace: false });
     }
 

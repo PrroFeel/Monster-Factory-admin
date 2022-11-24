@@ -10,7 +10,7 @@ import RegistButton from "../item/RegistButton";
 import { callRegistReviewApi } from "../../apis/ReviewAPICalls";
 
 import { useSelector } from "react-redux";
-
+import { useNavigate } from 'react-router-dom';
 
 function ReviewForm(){
 
@@ -31,14 +31,15 @@ function ReviewForm(){
 
     const review = useSelector(state=>state.reviewReducer);
 
+    const navigate = useNavigate();
     const onClickRegistHandler = (e) => {
-        // result 값 set
-        // dispathch({type: SET_REVIEW, payload: {name: "result", value: e.target.value}});
         // 등록 api 호출
         dispathch(callRegistReviewApi({form:{
             ...review,
             "result" : e.target.value
         }}));
+        navigate('/main/review',  { replace: false });
+
     }
     return (
         <>
