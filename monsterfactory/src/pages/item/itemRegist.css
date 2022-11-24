@@ -1,0 +1,121 @@
+textarea {
+    resize: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+    
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.itemregistdetailbox {
+    background-color: #DBCECE;
+    margin: 10%;
+    margin-top: 5%;
+    border-radius: 30px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+    padding-top: 20px;
+}
+
+.itemregistsmallbox {
+    background-color: white;
+    margin: 5%;
+    border-radius: 30px;
+    display: flex;
+    padding: 5%;
+    text-align: center;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.imguploadbtn {
+    border-radius: 30px;
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    margin-left: -50px;
+}
+
+.imgbox {
+    height: 200px;
+    width: 200px;
+    border: 1px solid;
+    margin-bottom: 5px;
+    padding-right: 0px;
+}
+
+.registinfoform {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    vertical-align: left;
+}
+
+.registitemname {
+    width: 400px;
+    margin-right: 10px;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 30px;
+    margin-left: 10px;
+    border: 2px solid;
+}
+
+.registitemprice {
+    width: 100px;
+    margin-right: 10px;
+    height: 50px;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid;
+}
+
+.registexplanation {
+    width: 490px;
+    border-radius: 30px;
+    height: 250px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 25px;
+    margin-top: 10px;
+    border: 2px solid;
+}
+
+.registitemcategorycode {
+    width: 100px;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 15px;
+    margin-right: 10px;
+    border: 2px solid;
+}
+
+.registitempower {
+    width: 100px;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 15px;
+    border: 2px solid;
+}
+
+.registitemobjname {
+    width: 290px;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 15px;
+    margin-right: 10px;
+    border: 2px solid;
+}
+
+.itemregistbtn {
+    margin-bottom: 30px;
+    margin-top: -30px;;
+}

@@ -1,11 +1,12 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { decodeJwt } from '../../utils/tokenUtils';
 import itemDetail from './itemDetail.css';
 
 import {
-    callItemBySearchAPI
+    callItemBySearchAPI,
+    callItemDeleteAPI
 } from '../../apis/ItemAPICalls'
 
 function ItemDetail() {
@@ -13,8 +14,8 @@ function ItemDetail() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const params = useParams();
-    const item = useSelector(state => state.itemReducer);
-    // const token = decodeJwt(window.localStorage.getItem("accessToken"));
+    const items = useSelector(state => state.itemReducer);
+    const item = items.results
 
     const [form, setForm] = useState({});
 
@@ -26,10 +27,10 @@ function ItemDetail() {
         }, []
     );
 
-    const onChangeHandler = (e) => {
-        setForm({
-            ...form
-        });
+    const onClickDeleteHandler = () => {
+        dispatch(callItemDeleteAPI(params.itemId));
+        alert('아이템이 삭제 되었습니다');
+        navigate('/main/item');
     };
 
     return (
@@ -47,6 +48,11 @@ function ItemDetail() {
                                 <h3>아이템 파워 : {item.itemPower}</h3>
                                 <h3>아이템 오브젝트 : {item.itemObjectName}</h3>
                             </div>
+                            
+                        </div>
+                        {/* <NavLink to={'update'}> 수정하기 </NavLink> */}
+                        <div className='deletebtnbox'>
+                            <button onClick={ onClickDeleteHandler } className='deletebtn'> 삭제하기 </button>
                         </div>
                     </div>
                 ))}

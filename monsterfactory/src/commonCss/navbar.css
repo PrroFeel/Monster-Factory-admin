@@ -48,6 +48,10 @@
     font-size: 15px;
 }
 
+.loginBtn:active, .loginBtn:hover {
+    color: #656E8C;
+}
+
 button {
     background-color: #E9E9C5;
     text-decoration: none;

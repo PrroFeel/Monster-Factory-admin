@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { decodeJwt } from '../../utils/tokenUtils';
 import item from './item.css';
 
 import {
@@ -15,23 +14,29 @@ function Item() {
     const navigate = useNavigate();
 
     const dispatch = useDispatch();
-    const itemList = useSelector(state => state.itemReducer);
+    const itemLists = useSelector(state => state.itemReducer);
+    const itemList = itemLists.results;
 
     useEffect(
         () => {
             dispatch(callItemAPI());
-        }, []
+        }, [dispatch]
     );
 
     const onClickHandler = (itemId) => {
         navigate(`${itemId}`, { replace: false });
     }
 
+    const onClickBtnHandler = () => {
+
+        navigate(`regist`, {replace: false })
+    }
+
     return (
         <>
             <div className='itembigbox'>
                 <div className='itemregistbtnposition'>
-                    <button className='itemregistbtn'>아이템 등록하기</button>
+                    <button className='itemregistbtn' onClick={ onClickBtnHandler }>아이템 등록하기</button>
                 </div>
                 <br/>
                 {

@@ -5,6 +5,8 @@ import Login from "./pages/admin/Login";
 import Main from "./pages/common/Main";
 import Item from "./pages/item/Item";
 import ItemDetail from "./pages/item/ItemDetail";
+import ItemRegist from "./pages/item/ItemRegist";
+import ItemUpdatePage from "./pages/item/ItemUpdatePage";
 import Manage from "./pages/manage/Manage";
 import Review from "./pages/review/Review";
 
@@ -13,7 +15,6 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={ <LoginLayout/> }>
           <Route index element ={ <Login/> }/>
         </Route>
@@ -21,6 +22,8 @@ function App() {
           <Route index element ={ <Main/> }/>
           <Route path="item" element={ <Item/> }/>
           <Route path="item/:itemId" element={ <ItemDetail/> }/>
+          <Route path="item/regist" element={ <ItemRegist/> }/>
+          <Route path="item/:itemId/update" element={ <ItemUpdatePage/> }/>
           <Route path="review" element={ <Review/> }/>
           <Route path="manage" element={ <Manage/> }/>
         </Route>
