@@ -18,7 +18,7 @@ export const callWaitedGameList = () => {
         })
         .then(response => response.json());
             dispatch({ type: GET_GAMES, payload: result });
-        
+            
     };
 }
 
