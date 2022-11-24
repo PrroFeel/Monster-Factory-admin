@@ -44,7 +44,7 @@ function ReviewForm(){
     return (
         <>
             <div className="textbox">
-                <h3>심사평</h3>
+                <h3 style={{color: 'white'}}>심사평</h3>
                 <textarea cols="10" rows="100" className='textareastyle' name="comment" onChange={onChangeHandler}></textarea>
             </div>
             <div style={{display:"flex", justifyContent:"center"}}>

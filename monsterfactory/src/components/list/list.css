@@ -11,6 +11,7 @@
 
 .listbox:hover {
     background-color: #656E8C;
+    color: white;
 }
 
 
@@ -28,7 +29,7 @@
 }
 
 .detailbox {
-    background-color: #DBCECE;
+    background-color: #2B3147;
     margin: 10%;
     border-radius: 30px;
 

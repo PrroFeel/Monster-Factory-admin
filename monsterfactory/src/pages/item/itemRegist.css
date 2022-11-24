@@ -12,7 +12,7 @@ input::-webkit-inner-spin-button {
 }
 
 .itemregistdetailbox {
-    background-color: #DBCECE;
+    background-color: #2B3147;
     margin: 10%;
     margin-top: 5%;
     border-radius: 30px;
@@ -34,11 +34,17 @@ input::-webkit-inner-spin-button {
 }
 
 .imguploadbtn {
+    color: white;
     border-radius: 30px;
     height: 30px;
     width: 200px;
     margin-top: 10px;
     margin-left: -50px;
+    background-color: #656E8C;
+}
+
+.imguploadbtn:hover {
+    color: black;
 }
 
 .imgbox {
@@ -117,5 +123,10 @@ input::-webkit-inner-spin-button {
 
 .itemregistbtn {
     margin-bottom: 30px;
-    margin-top: -30px;;
+    margin-top: -30px;
+    color: white;
+}
+
+.itemregistbtn:hover {
+    color: black;
 }

@@ -1,5 +1,5 @@
 .itemdetailbox {
-    background-color: #DBCECE;
+    background-color: #2B3147;
     margin: 10%;
     border-radius: 30px;
     display: flex;
@@ -21,7 +21,7 @@
 }
 
 .itemdetailinfotextbox {
-    background-color: #DBCECE;
+    /* background-color: #656E8C; */
     text-align: left;
     padding-left: 5%;
     margin: 3%;
@@ -29,15 +29,21 @@
     width: 100%;
     vertical-align: center;
     justify-content: center;
-    align-items: center;
+    border: 2px solid;
+    padding: 30px;
 }
 
 .deletebtn {
     height: 50px;
     width: 300px;
     border-radius: 30px;
-    background-color: #A19BC2;
+    background-color: #656E8C;
     font-size: 15px;
+    color: white;
+}
+
+.deletebtn:hover {
+    color: black;
 }
 
 .deletebtnbox {
