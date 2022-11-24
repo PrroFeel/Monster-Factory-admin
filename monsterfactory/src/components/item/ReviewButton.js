@@ -1,9 +1,10 @@
 import './button.css'
 
-function ReviewButton(){
+function ReviewButton({onClickHandler}){
+
     return (
         <div className="btnposition">
-            <button className='btn'>심사 하기</button>
+            <button className='btn' onClick={onClickHandler}>심사 하기</button>
         </div>
 
     );
